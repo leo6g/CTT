@@ -1,13 +1,11 @@
 import java.io.IOException;
-import java.text.DecimalFormat;
-import java.util.HashMap;
+import java.util.concurrent.CompletableFuture;
 
 public class APPTest {
 
 	public static void main(String[] args) throws IOException {
 		final Object obj = new Object();
 		final Object obj1 = new Object();
-		
 		Thread tt = new Thread() {
 			public void run() {
 				synchronized (obj) {
