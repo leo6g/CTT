@@ -11,6 +11,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
+import java.net.URI;
 import java.net.URL;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
@@ -238,8 +239,6 @@ public class HttpClientUtil {
 			response = httpClient.execute(httppost, HttpClientContext.create());
 			entity = response.getEntity();
 			result = EntityUtils.toString(entity, "utf-8");
-			EntityUtils.consume(entity);
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -275,7 +274,6 @@ public class HttpClientUtil {
             response = httpClient.execute(httpget, HttpClientContext.create());
             entity = response.getEntity();
             result = EntityUtils.toString(entity, "utf-8");
-            EntityUtils.consume(entity);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

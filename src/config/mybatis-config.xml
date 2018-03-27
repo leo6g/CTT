@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<!-- changes from the defaults -->
+		<setting name="lazyLoadingEnabled" value="false" />
+		<setting name="logImpl" value="LOG4J2" />
+	</settings>
+	<!-- 实体类,简称 -设置别名 -->
+	
+	<typeAliases>
+		<!-- <typeAlias alias="APPUser" type="com.ccservice.train.h5.grab.h5_train_grab_bean.APPUser" /> -->
+		<package name="com.ccservice.train.h5.grab.h5_train_grab_bean" />
+		<package name="com.ccservice.train.h5.grab.po" />
+		<package name="com.ccservice.train.h5.grab.vo" />
+		<package name="com.ccservice.train.h5.grab.qo" />
+	</typeAliases>
+</configuration>
